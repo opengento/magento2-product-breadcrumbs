@@ -1,0 +1,34 @@
+<?php
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+declare(strict_types=1);
+
+use Magento\Catalog\ViewModel\Product\Breadcrumbs;
+use Magento\Framework\Json\Helper\Data;
+use Magento\Theme\Block\Html\Breadcrumbs as BreadcrumbsBlock;
+use Opengento\ProductBreadcrumbs\ViewModel\Product\Breadcrumbs as BreadcrumbsConfig;
+
+/** @var BreadcrumbsBlock $block */
+
+/** @var Breadcrumbs $viewModel */
+$viewModel = $block->getData('viewModel');
+/** @var BreadcrumbsConfig $config */
+$config = $block->getData('breadcrumbsConfig');
+?>
+<?php if ($config->isServerSideRendered()): ?>
+    <?= $block->fetchView('Magento_Theme::html/breadcrumbs.phtml') ?>
+<?php else: ?>
+    <div class="breadcrumbs"></div>
+<?php endif; ?>
+<?php if ($config->isClientSideOverrideAllowed()): ?>
+    <?php $widget = $this->helper(Data::class)->jsonDecode($viewModel->getJsonConfigurationHtmlEscaped()); ?>
+    <script type="text/x-magento-init">
+        {
+            ".breadcrumbs": {
+                "breadcrumbs": <?= /* @noEscape */ $this->helper(Data::class)->jsonEncode($widget['breadcrumbs']) ?>
+            }
+        }
+    </script>
+<?php endif; ?>

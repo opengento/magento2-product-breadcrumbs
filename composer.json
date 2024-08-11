@@ -1,0 +1,59 @@
+{
+    "name": "opengento/module-product-breadcrumbs",
+    "description": "This module allows to toggle server side rendered breadcrumb for product pages.",
+    "keywords": [
+        "php",
+        "magento",
+        "magento2",
+        "catalog",
+        "product",
+        "breadcrumbs",
+        "hyva-ready",
+        "hyva",
+        "luma"
+    ],
+    "require": {
+        "php": "^8.1",
+        "magento/framework": "*",
+        "magento/module-backend": "*",
+        "magento/module-config": "*",
+        "magento/module-store": "*",
+        "magento/module-catalog": "*"
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "^33",
+        "roave/security-advisories": "dev-latest"
+    },
+    "suggest": {},
+    "type": "magento2-module",
+    "license": [
+        "MIT"
+    ],
+    "homepage": "https://github.com/opengento/magento2-product-breadcrumbs",
+    "authors": [
+        {
+            "name": "Opengento Team",
+            "email": "opengento@gmail.com",
+            "homepage": "https://opengento.fr/",
+            "role": "lead"
+        },
+        {
+            "name": "Thomas Klein",
+            "email": "thomaskein876@gmail.com",
+            "homepage": "https://www.linkedin.com/in/thomas-klein/",
+            "role": "maintainer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/opengento/magento2-product-breadcrumbs",
+        "issues": "https://github.com/opengento/magento2-product-breadcrumbs/issues"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Opengento\\ProductBreadcrumbs\\": ""
+        }
+    }
+}

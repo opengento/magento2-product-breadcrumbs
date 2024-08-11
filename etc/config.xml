@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <seo>
+                <render_product_breadcrumbs_server_side>1</render_product_breadcrumbs_server_side>
+                <override_product_breadcrumbs_client_side>1</override_product_breadcrumbs_client_side>
+                <product_breadcrumbs_strategy>deepest</product_breadcrumbs_strategy>
+            </seo>
+        </catalog>
+    </default>
+</config>

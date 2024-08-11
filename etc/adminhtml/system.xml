@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="seo">
+                <field id="render_product_breadcrumbs_server_side" translate="label comment" type="select" sortOrder="30" showInDefault="1" canRestore="1">
+                    <label>Render Product Breadcrumbs from Server Side</label>
+                    <comment>This setting depends of the theme. For Hyva store, also use the hyva settings.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="override_product_breadcrumbs_client_side" translate="label comment" type="select" sortOrder="31" showInDefault="1" canRestore="1">
+                    <label>Override Product Breadcrumbs on Client Side</label>
+                    <comment>This setting depends of the theme. For Hyva store, also use the hyva settings.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_breadcrumbs_strategy" translate="label" type="select" sortOrder="32" showInDefault="1" canRestore="1">
+                    <label>Product Breadcrumbs Strategy</label>
+                    <source_model>Opengento\ProductBreadcrumbs\Model\Config\Source\Strategies</source_model>
+                </field>
+                <field id="product_breadcrumbs_exclude_categories" translate="label comment" type="multiselect" sortOrder="33" showInDefault="1" canRestore="1">
+                    <label>Product Breadcrumbs Excluded Categories</label>
+                    <source_model>Opengento\ProductBreadcrumbs\Model\Config\Source\TopLevelCategories</source_model>
+                    <comment>Leave empty to allow all categories on breadcrumbs.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
