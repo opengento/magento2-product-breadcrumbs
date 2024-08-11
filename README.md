@@ -50,10 +50,10 @@ breadcrumbs template and update the script.
 
 ## Documentation
 
-- Toggle render server side the product breadcrumbs
-- Toggle allows client side to override product breadcrumbs based on navigation
-- Select best strategy to generate the product breadcrumbs (native, deepest, shallowest)
-- Exclude some root categories from being used to generate the breadcrumbs
+- Toggle server-side product breadcrumbs rendering.
+- Toggle to allow client-side to override product breadcrumbs based on navigation.
+- Select best strategy to generate the product breadcrumbs (native, deepest, shallowest).
+- Exclude some root categories from being used to generate the breadcrumbs.
 
 ## Support
 
