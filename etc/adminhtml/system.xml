@@ -10,23 +10,28 @@
         <section id="catalog">
             <group id="seo">
                 <field id="render_product_breadcrumbs_server_side" translate="label comment" type="select" sortOrder="30" showInDefault="1" canRestore="1">
-                    <label>Render Product Breadcrumbs from Server Side</label>
-                    <comment>This setting depends of the theme. For Hyva store, also use the hyva settings.</comment>
+                    <label>Render Product Breadcrumbs from Server-Side</label>
+                    <comment>This setting depends of the theme. If your store use Hyva theme, disable client-side breadcrumbs rendering.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>catalog/seo/render_product_breadcrumbs_server_side</config_path>
                 </field>
                 <field id="override_product_breadcrumbs_client_side" translate="label comment" type="select" sortOrder="31" showInDefault="1" canRestore="1">
-                    <label>Override Product Breadcrumbs on Client Side</label>
-                    <comment>This setting depends of the theme. For Hyva store, also use the hyva settings.</comment>
+                    <label>Override Product Breadcrumbs on Client-Side</label>
+                    <comment>If your store use Hyva theme, this setting is by-passed. You may want to enable the Hyva client-side breadcrumbs rendering.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>catalog/seo/override_product_breadcrumbs_client_side</config_path>
                 </field>
                 <field id="product_breadcrumbs_strategy" translate="label" type="select" sortOrder="32" showInDefault="1" canRestore="1">
                     <label>Product Breadcrumbs Strategy</label>
                     <source_model>Opengento\ProductBreadcrumbs\Model\Config\Source\Strategies</source_model>
+                    <config_path>catalog/seo/product_breadcrumbs_strategy</config_path>
                 </field>
                 <field id="product_breadcrumbs_exclude_categories" translate="label comment" type="multiselect" sortOrder="33" showInDefault="1" canRestore="1">
                     <label>Product Breadcrumbs Excluded Categories</label>
                     <source_model>Opengento\ProductBreadcrumbs\Model\Config\Source\TopLevelCategories</source_model>
+                    <can_be_empty>1</can_be_empty>
                     <comment>Leave empty to allow all categories on breadcrumbs.</comment>
+                    <config_path>catalog/seo/product_breadcrumbs_exclude_categories</config_path>
                 </field>
             </group>
         </section>

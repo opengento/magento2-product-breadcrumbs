@@ -1,6 +1,6 @@
 {
     "name": "opengento/module-product-breadcrumbs",
-    "description": "This module allows to toggle server side rendered breadcrumb for product pages.",
+    "description": "This module allows to toggle server side rendered breadcrumbs for product pages.",
     "keywords": [
         "php",
         "magento",
@@ -15,10 +15,10 @@
     "require": {
         "php": "^8.1",
         "magento/framework": "*",
-        "magento/module-backend": "*",
         "magento/module-config": "*",
         "magento/module-store": "*",
-        "magento/module-catalog": "*"
+        "magento/module-catalog": "*",
+        "magento/module-theme": "*"
     },
     "require-dev": {
         "magento/magento-coding-standard": "^33",

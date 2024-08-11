@@ -5,7 +5,7 @@
 [![Packagist](https://img.shields.io/packagist/dt/opengento/module-product-breadcrumbs.svg?style=flat-square)](https://packagist.org/packages/opengento/module-product-breadcrumbs/stats)
 [![Packagist](https://img.shields.io/packagist/dm/opengento/module-product-breadcrumbs.svg?style=flat-square)](https://packagist.org/packages/opengento/module-product-breadcrumbs/stats)
 
-This module allows to toggle server side rendered breadcrumb for product pages.
+This module allows to toggle server side rendered breadcrumbs for product pages.
 
  - [Setup](#setup)
    - [Composer installation](#composer-installation)
@@ -41,13 +41,16 @@ bin/magento setup:upgrade
 
 ## Features
 
-This module is Hyva-ready!  
-This module render server-sided product breadcrumb so it's visible to any robot without requiring any js loads and process.  
-Can you still enable the js breadcrumb so your user can see natural breadcrumbs following their navigation.
+This module render server-sided product breadcrumbs so it's visible to any robot without requiring any js loads and process.  
+Can you still enable the js breadcrumbs so your user can see natural breadcrumbs following their navigation.  
+
+If your store use Hyva theme, this module works out-of-the-box when the breadcrumbs is server-side rendering. If you want 
+to print a default breadcrumb then override it with client-side rendering, you need to override the client-side rendered 
+breadcrumbs template and update the script.
 
 ## Documentation
 
-- Toggle render server side the product rbeadcrumbs
+- Toggle render server side the product breadcrumbs
 - Toggle allows client side to override product breadcrumbs based on navigation
 - Select best strategy to generate the product breadcrumbs (native, deepest, shallowest)
 - Exclude some root categories from being used to generate the breadcrumbs
