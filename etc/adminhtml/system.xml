@@ -9,15 +9,14 @@
     <system>
         <section id="catalog">
             <group id="seo">
-                <field id="render_product_breadcrumbs_server_side" translate="label comment" type="select" sortOrder="30" showInDefault="1" canRestore="1">
+                <field id="render_product_breadcrumbs_server_side" translate="label" type="select" sortOrder="30" showInDefault="1" canRestore="1">
                     <label>Render Product Breadcrumbs from Server-Side</label>
-                    <comment>This setting depends of the theme. If your store use Hyva theme, disable client-side breadcrumbs rendering.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <config_path>catalog/seo/render_product_breadcrumbs_server_side</config_path>
                 </field>
                 <field id="override_product_breadcrumbs_client_side" translate="label comment" type="select" sortOrder="31" showInDefault="1" canRestore="1">
                     <label>Override Product Breadcrumbs on Client-Side</label>
-                    <comment>If your store use Hyva theme, this setting is by-passed. You may want to enable the Hyva client-side breadcrumbs rendering.</comment>
+                    <comment>If you enable override and your store use Hyvä theme, you must enable the Hyvä client-side breadcrumbs rendering.</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <config_path>catalog/seo/override_product_breadcrumbs_client_side</config_path>
                 </field>

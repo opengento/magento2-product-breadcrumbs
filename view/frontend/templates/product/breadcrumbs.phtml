@@ -18,7 +18,7 @@ $viewModel = $block->getData('viewModel');
 $config = $block->getData('breadcrumbsConfig');
 ?>
 <?php if ($config->isServerSideRendered()): ?>
-    <?= $block->fetchView('Magento_Theme::html/breadcrumbs.phtml') ?>
+    <?= $block->fetchView($block->getTemplateFile('Magento_Theme::html/breadcrumbs.phtml')) ?>
 <?php else: ?>
     <div class="breadcrumbs"></div>
 <?php endif; ?>

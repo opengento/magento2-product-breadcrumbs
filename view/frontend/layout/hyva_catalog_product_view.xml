@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product_breadcrumbs">
+            <arguments>
+                <argument name="client_side_rendered_crumbs_template" xsi:type="string">Opengento_ProductBreadcrumbs::hyvä/product/breadcrumbs.phtml</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
