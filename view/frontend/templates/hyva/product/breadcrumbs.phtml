@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-use Hyvä\Theme\Model\ViewModelRegistry;
+use Hyva\Theme\Model\ViewModelRegistry;
 use Magento\Framework\Escaper;
 use Magento\Theme\Block\Html\Breadcrumbs as BreadcrumbsBlock;
 use Opengento\ProductBreadcrumbs\ViewModel\Product\Breadcrumbs as BreadcrumbsConfig;
@@ -26,7 +26,7 @@ $config = $viewModels->require(BreadcrumbsConfig::class);
     function generateProductBreadcrumbsOnProductPage() {
 <?php if (!$config->isServerSideRendered() || $config->isClientSideOverrideAllowed()): ?>
     <?php $breadcrumbsTemplate = '<div id="product_breadcrumbs">' . $block->fetchView($block->getTemplateFile('Magento_Catalog::product/view/breadcrumbs.phtml')) . '</div>'; ?>
-    hyvä.replaceDomElement('#product_breadcrumbs', '<?= $escaper->escapeJs($breadcrumbsTemplate) ?>');
+    hyva.replaceDomElement('#product_breadcrumbs', '<?= $escaper->escapeJs($breadcrumbsTemplate) ?>');
 <?php endif; ?>
     }
 </script>

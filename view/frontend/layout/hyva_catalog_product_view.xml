@@ -9,7 +9,7 @@
     <body>
         <referenceBlock name="product_breadcrumbs">
             <arguments>
-                <argument name="client_side_rendered_crumbs_template" xsi:type="string">Opengento_ProductBreadcrumbs::hyvä/product/breadcrumbs.phtml</argument>
+                <argument name="client_side_rendered_crumbs_template" xsi:type="string">Opengento_ProductBreadcrumbs::hyva/product/breadcrumbs.phtml</argument>
             </arguments>
         </referenceBlock>
     </body>
