@@ -22,7 +22,7 @@ $config = $block->getData('breadcrumbsConfig');
 <?php else: ?>
     <div class="breadcrumbs"></div>
 <?php endif; ?>
-<?php if ($config->isClientSideOverrideAllowed()): ?>
+<?php if (!$config->isServerSideRendered() || $config->isClientSideOverrideAllowed()): ?>
     <?php $widget = $this->helper(Data::class)->jsonDecode($viewModel->getJsonConfigurationHtmlEscaped()); ?>
     <script type="text/x-magento-init">
         {
