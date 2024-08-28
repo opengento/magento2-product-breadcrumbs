@@ -5,6 +5,7 @@
  */
 declare(strict_types=1);
 
+use Magento\Catalog\Helper\Data as CatalogHelper;
 use Magento\Catalog\ViewModel\Product\Breadcrumbs;
 use Magento\Framework\Json\Helper\Data;
 use Magento\Theme\Block\Html\Breadcrumbs as BreadcrumbsBlock;
@@ -18,7 +19,16 @@ $viewModel = $block->getData('viewModel');
 $config = $block->getData('breadcrumbsConfig');
 ?>
 <?php if ($config->isServerSideRendered()): ?>
-    <?= $block->fetchView($block->getTemplateFile('Magento_Theme::html/breadcrumbs.phtml')) ?>
+    <?php
+    /** @var CatalogHelper $catalogHelper */
+    $catalogHelper = $this->helper(CatalogHelper::class);
+    /** @var BreadcrumbsBlock $breadcrumbs */
+    $breadcrumbs = $block->getLayout()->createBlock(BreadcrumbsBlock::class);
+    foreach ($catalogHelper->getBreadcrumbPath() as $name => $crumb) {
+        $breadcrumbs->addCrumb($name, $crumb);
+    }
+    ?>
+    <?= $breadcrumbs->toHtml() ?>
 <?php else: ?>
     <div class="breadcrumbs"></div>
 <?php endif; ?>
