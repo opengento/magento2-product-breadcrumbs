@@ -50,7 +50,7 @@ Can you still enable the js breadcrumbs so your user can see natural breadcrumbs
 
 - Toggle server-side product breadcrumbs rendering.
 - Toggle to allow client-side to override product breadcrumbs based on navigation.
-- Select best strategy to generate the product breadcrumbs (native, deepest, shallowest).
+- Select best strategy to generate the product breadcrumbs (native, deepest, closest).
 - Exclude some root categories from being used to generate the breadcrumbs.
 
 ## Support
