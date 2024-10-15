@@ -13,7 +13,7 @@
         <arguments>
             <argument name="strategies" xsi:type="array">
                 <item name="deepest" xsi:type="object">Opengento\ProductBreadcrumbs\Service\Breadcrumbs\DeepestCategory</item>
-                <item name="shallowest" xsi:type="object">Opengento\ProductBreadcrumbs\Service\Breadcrumbs\ShallowestCategory</item>
+                <item name="closest" xsi:type="object">Opengento\ProductBreadcrumbs\Service\Breadcrumbs\ClosestCategory</item>
             </argument>
         </arguments>
     </type>
@@ -22,7 +22,7 @@
             <argument name="direction" xsi:type="const">Magento\Framework\Data\Collection::SORT_ORDER_DESC</argument>
         </arguments>
     </virtualType>
-    <virtualType name="Opengento\ProductBreadcrumbs\Service\Breadcrumbs\ShallowestCategory" type="Opengento\ProductBreadcrumbs\Service\Breadcrumbs\DepthStrategy">
+    <virtualType name="Opengento\ProductBreadcrumbs\Service\Breadcrumbs\ClosestCategory" type="Opengento\ProductBreadcrumbs\Service\Breadcrumbs\DepthStrategy">
         <arguments>
             <argument name="direction" xsi:type="const">Magento\Framework\Data\Collection::SORT_ORDER_ASC</argument>
         </arguments>
