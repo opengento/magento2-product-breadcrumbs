@@ -1,4 +1,4 @@
-# Product Breadcrumbs Rendering Stratégie Module for Magento 2
+# Product Breadcrumbs Rendering Strategie Module for Magento 2
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/opengento/module-product-breadcrumbs.svg?style=flat-square)](https://packagist.org/packages/opengento/module-product-breadcrumbs)
 [![License: MIT](https://img.shields.io/github/license/opengento/magento2-product-breadcrumbs.svg?style=flat-square)](./LICENSE) 
