@@ -7,7 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="product_breadcrumbs">
+        <referenceBlock name="product_breadcrumbs" aria-label="Breadcrumb" role="navigation">
             <arguments>
                 <argument name="client_side_rendered_crumbs_template" xsi:type="string">Opengento_ProductBreadcrumbs::hyva/product/breadcrumbs.phtml</argument>
             </arguments>
