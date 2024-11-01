@@ -7,7 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="breadcrumbs" template="Opengento_ProductBreadcrumbs::product/breadcrumbs.phtml" aria-label="Breadcrumb" role="navigation">
+        <referenceBlock name="breadcrumbs" template="Opengento_ProductBreadcrumbs::product/breadcrumbs.phtml">
             <arguments>
                 <argument name="breadcrumbsConfig" xsi:type="object">Opengento\ProductBreadcrumbs\ViewModel\Product\Breadcrumbs</argument>
             </arguments>
