@@ -7,12 +7,13 @@ declare(strict_types=1);
 
 use Magento\Catalog\Helper\Data as CatalogHelper;
 use Magento\Catalog\ViewModel\Product\Breadcrumbs;
+use Magento\Framework\Escaper;
 use Magento\Framework\Json\Helper\Data;
 use Magento\Theme\Block\Html\Breadcrumbs as BreadcrumbsBlock;
 use Opengento\ProductBreadcrumbs\ViewModel\Product\Breadcrumbs as BreadcrumbsConfig;
 
+/** @var Escaper $escaper */
 /** @var BreadcrumbsBlock $block */
-
 /** @var Breadcrumbs $viewModel */
 $viewModel = $block->getData('viewModel');
 /** @var BreadcrumbsConfig $config */
@@ -38,7 +39,7 @@ $config = $block->getData('breadcrumbsConfig');
     ?>
     <?= $breadcrumbs->toHtml() ?>
 <?php else: ?>
-    <div class="breadcrumbs" aria-label="Breadcrumb" role="navigation"></div>
+    <div class="breadcrumbs" aria-label="<?= $escaper->escapeHtmlAttr(__('Breadcrumb')) ?>" role="navigation"></div>
 <?php endif; ?>
 <?php if (!$config->isServerSideRendered() || $config->isClientSideOverrideAllowed()): ?>
     <?php $widget = $this->helper(Data::class)->jsonDecode($viewModel->getJsonConfigurationHtmlEscaped()); ?>
