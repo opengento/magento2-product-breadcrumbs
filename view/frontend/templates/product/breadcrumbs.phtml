@@ -38,7 +38,7 @@ $config = $block->getData('breadcrumbsConfig');
     ?>
     <?= $breadcrumbs->toHtml() ?>
 <?php else: ?>
-    <div class="breadcrumbs"></div>
+    <div class="breadcrumbs" aria-label="Breadcrumb" role="navigation"></div>
 <?php endif; ?>
 <?php if (!$config->isServerSideRendered() || $config->isClientSideOverrideAllowed()): ?>
     <?php $widget = $this->helper(Data::class)->jsonDecode($viewModel->getJsonConfigurationHtmlEscaped()); ?>
