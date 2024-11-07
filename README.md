@@ -46,6 +46,17 @@ This module is Hyvä-Ready!
 This module render server-sided product breadcrumbs so it's visible to any robot without requiring any js loads and process.  
 Can you still enable the js breadcrumbs so your user can see natural breadcrumbs following their navigation.
 
+## Settings
+
+The settings are available at:
+
+`Stores > Configuration > Catalog > Catalog > Search Engine Optimization`
+
+- Render Product Breadcrumbs from Server-Side
+- Override Product Breadcrumbs on Client-Side
+- Product Breadcrumbs Strategy
+- Product Breadcrumbs Excluded Categories
+
 ## Documentation
 
 - Toggle server-side product breadcrumbs rendering.
