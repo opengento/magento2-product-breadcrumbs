@@ -16,17 +16,18 @@ use Opengento\ProductBreadcrumbs\ViewModel\Product\Breadcrumbs as BreadcrumbsCon
 
 /** @var BreadcrumbsConfig $config */
 $config = $viewModels->require(BreadcrumbsConfig::class);
+$isClientSideRendered = !$config->isServerSideRendered() || $config->isClientSideOverrideAllowed();
 ?>
-<div id="product_breadcrumbs" aria-label="Breadcrumb" role="navigation" x-init="generateProductBreadcrumbsOnProductPage()">
+<div id="product_breadcrumbs" aria-label="<?= $escaper->escapeHtmlAttr(__('Breadcrumb')) ?>" role="navigation"<?= $isClientSideRendered ? ' x-init="generateProductBreadcrumbsOnProductPage()"' : '' ?>>
 <?php if ($config->isServerSideRendered()): ?>
     <?= $block->fetchView($block->getTemplateFile('Magento_Theme::html/breadcrumbs.phtml')) ?>
 <?php endif; ?>
 </div>
-<script>
-    function generateProductBreadcrumbsOnProductPage() {
-<?php if (!$config->isServerSideRendered() || $config->isClientSideOverrideAllowed()): ?>
-    <?php $breadcrumbsTemplate = '<div id="product_breadcrumbs" aria-label="Breadcrumb" role="navigation">' . $block->fetchView($block->getTemplateFile('Magento_Catalog::product/view/breadcrumbs.phtml')) . '</div>'; ?>
-    hyva.replaceDomElement('#product_breadcrumbs', '<?= $escaper->escapeJs($breadcrumbsTemplate) ?>');
+<?php if ($isClientSideRendered): ?>
+    <script>
+        function generateProductBreadcrumbsOnProductPage() {
+            <?php $breadcrumbsTemplate = '<div id="product_breadcrumbs" aria-label="' . $escaper->escapeHtmlAttr(__('Breadcrumb')) . '" role="navigation">' . $block->fetchView($block->getTemplateFile('Magento_Catalog::product/view/breadcrumbs.phtml')) . '</div>'; ?>
+            hyva.replaceDomElement('#product_breadcrumbs', '<?= $escaper->escapeJs($breadcrumbsTemplate) ?>');
+        }
+    </script>
 <?php endif; ?>
-    }
-</script>

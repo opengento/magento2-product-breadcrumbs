@@ -24,6 +24,14 @@ $config = $block->getData('breadcrumbsConfig');
     $catalogHelper = $this->helper(CatalogHelper::class);
     /** @var BreadcrumbsBlock $breadcrumbs */
     $breadcrumbs = $block->getLayout()->createBlock(BreadcrumbsBlock::class);
+    $breadcrumbs->addCrumb(
+        'home',
+        [
+            'label' => __('Home'),
+            'title' => __('Go to Home Page'),
+            'link' => $block->getBaseUrl()
+        ]
+    );
     foreach ($catalogHelper->getBreadcrumbPath() as $name => $crumb) {
         $breadcrumbs->addCrumb($name, $crumb);
     }
