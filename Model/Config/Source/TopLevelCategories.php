@@ -43,7 +43,7 @@ class TopLevelCategories implements OptionSourceInterface
         foreach ($collection->getItemsByColumnValue(CategoryInterface::KEY_LEVEL, 1) as $category) {
             $group = ['label' => $category->getName(), 'value' => []];
             foreach ($collection->getItemsByColumnValue(CategoryInterface::KEY_PARENT_ID, $category->getId()) as $child) {
-                $group['value'][] = ['label' => $child->getName(), 'value' => $category->getId()];
+                $group['value'][] = ['label' => $child->getName(), 'value' => $child->getId()];
             }
 
             $options[] = $group;
