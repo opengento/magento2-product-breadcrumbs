@@ -22,12 +22,20 @@ class DepthStrategy implements CreateProductBreadcrumbsInterface
     public function execute(Product $product): array
     {
         $breadcrumbs = [];
-        foreach ($this->findCategoryByDepth($product)->getParentCategories() as $parentCategory) {
-            $breadcrumbs['category' . $parentCategory->getId()] = [
-                'label' => $parentCategory->getName(),
-                'link' => $parentCategory->getUrl(),
-            ];
+        $category = $this->findCategoryByDepth($product);
+        $categories = $category->getParentCategories();
+
+        // Necessary because `getParentCategories` does not return parent categories in nested order.
+        foreach ($category->getPathIds() as $categoryId) {
+            $parentCategory = $categories[$categoryId] ?? null;
+            if ($parentCategory?->getName()) {
+                $breadcrumbs['category' . $parentCategory->getId()] = [
+                    'label' => $parentCategory->getName(),
+                    'link' => $parentCategory->getUrl(),
+                ];
+            }
         }
+
         $breadcrumbs['product'] = ['label' => $product->getName()];
 
         return $breadcrumbs;
