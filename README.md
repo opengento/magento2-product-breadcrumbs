@@ -43,8 +43,8 @@ bin/magento setup:upgrade
 
 This module is Hyvä-Ready!
 
-This module render server-sided product breadcrumbs so it's visible to any robot without requiring any js loads and process.  
-Can you still enable the js breadcrumbs so your user can see natural breadcrumbs following their navigation.
+This module render server-sided product breadcrumbs so it's visible to any robot  analyzing the DOM without requiring any js load and process.
+You can still enable the js breadcrumbs so it is updated by client-side generation and your user can see the native breadcrumbs based on their navigation.
 
 ## Settings
 
